@@ -1,4 +1,4 @@
-package com.plcoding.contactscomposemultiplatform.core.utils
+package com.plcoding.contactscomposemultiplatform.core.presentation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -8,7 +8,7 @@ import org.jetbrains.skia.Bitmap
 import org.jetbrains.skia.Image
 
 @Composable
-fun rememberBitmapFromBytes(bytes: ByteArray?): ImageBitmap? {
+actual fun rememberBitmapFromBytes(bytes: ByteArray?): ImageBitmap? {
     return remember(bytes) {
         if(bytes != null){
             Bitmap.makeFromImage(
